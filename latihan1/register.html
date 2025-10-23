@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latihan 1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <!-- Bagian Kiri -->
+    <div class="left">
+      <p class="hello">Hello,</p>
+      <p class="welcome">welcome!</p>
+      <p>
+        <strong>Create</strong> your <strong>account to access</strong> academic<br>
+        services and campus information.
+      </p>
+    </div>
+
+    <!-- Bagian Kanan -->
+    <div class="right">
+      <div class="form-box">
+        <h2>Create Account</h2>
+
+      
+          <label>Nama Depan</label>
+          <input type="text" id="firstName" placeholder="Masukkan nama depan" required>
+
+          <label>Nama Belakang</label>
+          <input type="text" id="lastName" placeholder="Masukkan nama belakang" required>
+
+          <br><br>
+          <button type="submit" id="submit">Create</button>
+     
+
+        <p class="small-text">
+          Already have an account? <a href="#">Sign in here.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+     
+    <script>
+    // Ambil elemen input dan tombol
+    const firstName = document.getElementById('firstName');
+    const lastName = document.getElementById('lastName');
+    const button = document.getElementById('submit');
+
+    // Tambahkan event listener untuk tombol
+    button.addEventListener('click', function() {
+      const fullName = `${firstName.value} ${lastName.value}`;
+      console.log(`Nama Lengkap : ${fullName}`);
+    
+    });
+  </script>
+
+</body>
+</html>
