@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  background: linear-gradient(135deg, #1a0099, #990066);
+  color: #fff;
+}
+
+/* Container */
+.container {
+  display: flex;
+  flex: 1;
+  margin: 0 100px 0 100px;
+}
+
+/* Bagian kiri */
+.left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 10%;
+}
+
+
+.left .hello{
+font-size: 60px;
+font-weight: lighter;
+line-height: 30px;
+}
+
+.left .welcome{
+font-size: 70px;
+font-weight: 700;
+
+}
+
+
+.left p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+}
+
+/* Bagian kanan */
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 30px 30px 0 0;
+  margin: 90px 170px 0 0px;
+
+}
+
+/* Kotak form */
+.form-box {
+  width: 70%;
+  color: #1a0099;
+}
+
+/* Judul form */
+.form-box h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Label dan input */
+label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 6px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #1a0099;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+/* button */
+button {
+  width: 100%;
+  padding: 12px;
+  background: #1a0099;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* have acc */
+.small-text {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+}
+
+.small-text a {
+  color: #990066;
+  text-decoration: none;
+}
+
+.small-text a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    border-radius: 0;
+  }
+
+  .left-section, .right-section {
+    border-radius: 0;
+    padding: 60px 30px;
+  }
+
+  .left-section {
+    text-align: center;
+  }
+}
