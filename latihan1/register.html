@@ -43,18 +43,17 @@
   </div>
      
     <script>
-    // Ambil elemen input dan tombol
-    const firstName = document.getElementById('firstName');
-    const lastName = document.getElementById('lastName');
-    const button = document.getElementById('submit');
+      
+      const firstName = document.getElementById('firstName');
+      const lastName = document.getElementById('lastName');
+      const button = document.getElementById('submit');
 
-    // Tambahkan event listener untuk tombol
-    button.addEventListener('click', function() {
+      button.addEventListener('click', function() {
       const fullName = `${firstName.value} ${lastName.value}`;
       console.log(`Nama Lengkap : ${fullName}`);
-    
-    });
-  </script>
+      });
+
+    </script>
 
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Latihan 1</title>
+  <title>Latihan 2</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,7 +24,6 @@
       <div class="form-box">
         <h2>Create Account</h2>
 
-      
         <form id="gradeForm">
           <label for="firstName">Nama Depan</label>
           <input type="text" id="firstName" placeholder="Masukkan nama depan" required>
@@ -36,45 +35,44 @@
           <input type="number" id="score" placeholder="Masukkan nilai (0 - 100)" required>
 
           <button type="submit">Tampilkan</button>
-      </form>
+        </form>
      
-
         <p class="small-text">
           Already have an account? <a href="#">Sign in here.</a>
         </p>
+
       </div>
     </div>
   </div>
      
     <script>
-    const form = document.getElementById('gradeForm');
+      const form = document.getElementById('gradeForm');
 
-    form.addEventListener('submit', function(event) {
-      event.preventDefault(); 
+      form.addEventListener('submit', function(event) {
+        event.preventDefault(); 
 
-      const firstName = document.getElementById('firstName').value;
-      const lastName = document.getElementById('lastName').value;
-      const score = parseFloat(document.getElementById('score').value);
-      let grade = '';
+        const firstName = document.getElementById('firstName').value;
+        const lastName = document.getElementById('lastName').value;
+        const score = parseFloat(document.getElementById('score').value);
+        let grade = '';
 
-      // Tentukan nilai huruf berdasarkan rentang
-      if (score >= 85 && score <= 100) grade = 'A';
-      else if (score > 80 && score < 85) grade = 'A-';
-      else if (score > 75 && score <= 79.9) grade = 'B+';
-      else if (score >= 70 && score <= 74.9) grade = 'B';
-      else if (score >= 65 && score <= 69.9) grade = 'B-';
-      else if (score >= 60 && score <= 64.9) grade = 'C+';
-      else if (score >= 55 && score <= 59.9) grade = 'C';
-      else if (score >= 40 && score <= 54.9) grade = 'D';
-      else if (score >= 0 && score <= 39.9) grade = 'E';
-      else grade = 'Nilai tidak valid';
+        // Tentukan nilai huruf berdasarkan rentang
+        if (score >= 85 && score <= 100) grade = 'A';
+        else if (score > 80 && score < 85) grade = 'A-';
+        else if (score > 75 && score <= 79.9) grade = 'B+';
+        else if (score >= 70 && score <= 74.9) grade = 'B';
+        else if (score >= 65 && score <= 69.9) grade = 'B-';
+        else if (score >= 60 && score <= 64.9) grade = 'C+';
+        else if (score >= 55 && score <= 59.9) grade = 'C';
+        else if (score >= 40 && score <= 54.9) grade = 'D';
+        else if (score >= 0 && score <= 39.9) grade = 'E';
+        else grade = 'Nilai tidak valid';
+    
+        console.log(`Nama Lengkap : ${firstName} ${lastName}`);
+        console.log(`Nilai Angka : ${score}`);
+        console.log(`Nilai Huruf : ${grade}`);
 
-  
-      console.log(`Nama Lengkap : ${firstName} ${lastName}`);
-      console.log(`Nilai Angka : ${score}`);
-      console.log(`Nilai Huruf : ${grade}`);
-
-    });
+      });
   </script>
 
 </body>
